@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 一个数组，存储着好多个数字
+  var arr = [1, 9, 14, 87, 33, 21, 15];
+  // 把里面的所有的数字相加起来
+  // var sum = arr[0] + arr[1] + arr[2] + arr[3] + arr[4] + arr[5];
+  // console.log(sum);
+
+  var sum = 0
+
+
+// 这里i <= arr.length;不能这样写 只能写-1 因为是要索引遍历仔细想想
+  // for (var i = 0; i <= arr.length-1; i++) {
+  //   sum += arr[i];
+  // }
+  
+  // console.log(sum);
+  
+
+ //最简单的前面 i < arr.length 不能等于多了一次循环，后面也不用-1了。
+ for (var i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  
+  console.log(sum);
+</script>
+
+</html>

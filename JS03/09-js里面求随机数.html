@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  // js里面求随机数
+
+  // var r = Math.random(); // 是一个可以得到 [0,1) 这区间里面的随机小数的一个方法
+  // console.log(r);
+
+  // 随机小数转换为随机整数 ，思路就是放大一定的倍数，然后取整
+  var r = Math.random() * 10; // [0,10)
+  // r = parseInt(r);
+  r = Math.floor(r); // [0,9] // Math.floor() 作用是 把一个小数，向下取整，向数轴的左边取整
+  // console.log(r);
+
+  var arr = ['a','b','c','d'];
+  // 随机索引只能是从0开始到3结束
+  var r = Math.random() * arr.length // [0,4)
+  r = Math.floor(r); // [0,3]
+  console.log(r);
+</script>
+</html>

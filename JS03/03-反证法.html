@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+// 判断n是否一个质数
+// 从2开始，除到(n-1),如果都不整除，就是质数 - 正面证明
+// 发现正面证明一个数字是否质数非常难
+// 反证法
+/*
+  以后只要发现要证明多个条件同时成立 —— 反证法
+    反证法：
+      1.先假设某个结论是成立的
+      2.找一个反例，证明假设是不成立的
+
+    反证法的步骤：
+      1.假设成立
+      2.循环的找反例
+      3.判断假设是否仍然成立
+*/
+
+var n = parseInt(prompt('请输入一个整数'));// 9
+// 1 假设n是一个质数
+var flag = true;//使用一个变量来表示假设是成立的
+// 2 尝试找反例 - 只要证明从2到n-1之间，有1个数字是整除的即可
+for(var i = 2; i <= n-1; i++){
+  if(n % i === 0){
+    // 只要满足条件，就证明了，有一个1和n本身以外的数字可以被整除 —— 推倒了假设
+    flag = false;
+    // 如果找打了反例，就后面的循环没有必要了
+    break;
+  }
+}
+// 3.看看flag到底是true还是false，如果还是true，就是没有找到反例，假设是成立的
+if(flag){
+  console.log('就是一个质数');
+}else {
+  console.log('不是一个质数');
+}
+
+</script>
+</html>

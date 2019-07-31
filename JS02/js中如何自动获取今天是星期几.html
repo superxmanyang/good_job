@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+      // 1 找一个时间掌控者
+
+  var date =new Date();
+//   console.log(date);
+// 可以获取到当前的时间
+  
+  // 2 让时间掌控者告诉我们，今天是星期几
+  var day = date.getDay(); // 从一个人那里指挥他告诉我们今天是周几
+  // day 就是 0到6之间的数字     固定写法
+//  console.log(day);
+switch (day) {
+    case 1:
+      alert('上学');
+      break;
+    case 2:
+      alert('体育课');
+      break;
+    case 3:
+      alert('购物');
+      break;
+    case 4:
+      alert('写代码');
+      break;
+    case 5:
+      alert('看电影');
+      break;
+    case 6:
+    case 0:
+      alert('休息');
+      break;
+  }
+
+//    case后面的===3不是字符串
+ 
+  
+</script>
+</html>

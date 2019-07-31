@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var score = parseFloat(prompt('请输入分数'));
+ 
+    // &&  
+    // 作用就是连接多个条件，并且要求多个条件同时成立
+    // 运算法则：
+    //   要求所有的条件都是true，才会是true，只要任意一个条件是false，结果就是false
+
+    
+    if (100 >= score && score >= 90) {
+        console.log('真是太棒了')
+
+    }else if(90 >= score && score >= 80){
+        console.log('真是太不错了')
+    }
+    else if(80 >= score && score >= 60){
+        console.log('真是一般')
+    }else{
+        
+        console.log('真是laji')
+    }
+
+</script>
+
+</html>

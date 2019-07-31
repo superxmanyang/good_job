@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  /*
+    比较三个数谁更大
+  
+    步骤：
+      1.准备三个数字
+      2.先比较两个数字，得到更大者，再使用更大者跟第三个数字比较
+      3.根据比较结果，提示
+  */
+
+  var n1 = parseFloat(prompt('输入第一个数字'));
+  var n2 = parseFloat(prompt('输入第二个数字'));
+  var n3 = parseFloat(prompt('输入第三个数字'));
+//   if else 结构分别是 true 跟false 的问题
+// if =true else = false
+
+//   先用n1跟n2n3比较确认就直接输出，if语句里面还可以嵌套if语句，
+  if(n1>n2){
+      if(n1>n3){
+          console.log('第一个数字最大，值是：' + n1);
+      }
+      else{
+          console.log('第三个数字最大，值是' + n3);       
+      }
+  }
+
+
+// 假如一开始就不成立的话所以我们要再次判断n2 //   否则n3最大
+  else {
+      if(n2>n3){
+         console.log('第二个数字最大，值是'+n2);
+      }
+   
+      else{
+        console.log('第三个数字最大，值是'+n3);
+      }
+  }
+
+
+
+</script>
+
+</html>

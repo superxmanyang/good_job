@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  /*
+    从结果逆推
+  
+    题目1 ： 求两个数字的最大值
+      需求：
+        求两个数谁更大
+        结果是输出谁更大
+        怎么知道谁更大 - 判断-比较
+        要判断需要先有两个数字 - 自己写或者直接使用prompt都可以
+    
+      步骤：
+        1.准备两个数字
+        2.判断比较
+        3.根据判断结果，提示
+  */
+  // var num1 = parseFloat(prompt('请输入第一个数字'));
+  // var num2 = parseFloat(prompt('请输入第二个数字'));
+
+  // 有可能num1或者num2得到的是NaN，就无法继续比较了 - 先判断num1和num2都不是NaN才可以继续比较
+  // 在js里面  NaN 是不等于 NaN的
+  // 在js厘米，要判断一个东西是不是可以转换为数字，用  isNaN 判断
+  // 用法： isNaN(数据) 判断某个东西是否不是一个数字，如果不是数字，返回true，否则返回false
+
+  if (isNaN(num1) === false && isNaN(num2) === false) {
+    // console.log('第一个输入的是数字');
+    // 两个都是数字，才继续判断两个数字谁更大
+    if (num1 > num2) {
+      console.log('第一个数字比较大，它的值是：' + num1);
+    } else {
+      console.log('第二个数字比较大，它的值是：' + num2);
+    }
+  }
+
+
+//   可以简写，但是现在不要气掌握，后期我会要求的
+
+// num1=10;
+// num2=20;
+//   if (!isNaN(num1) && !isNaN(num2)) {
+//     // console.log('第一个输入的是数字');
+//     // 两个都是数字，才继续判断两个数字谁更大
+//     if (num1 > num2) {
+//       console.log('第一个数字比较大，它的值是：' + num1);
+//     } else {
+//       console.log('第二个数字比较大，它的值是：' + num2);
+//     }
+//   }
+
+
+
+</script>
+
+</html>

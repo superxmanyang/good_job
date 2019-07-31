@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /*
+      判断想性别，更加推荐使用switch-case结构，因为性别是固定值
+      今天上午学习的if，更加推荐作 区间 判断
+    
+      固定语法
+    
+        switch (变量) {
+          case 固定值1:
+              变量 === 固定值1 的执行的代码
+            break;
+          case 固定值2:
+              变量 === 固定值2 的执行的代码
+            break;
+          case 固定值3:
+              变量 === 固定值3 的执行的代码
+            break;
+          default :
+            以上分支都不成立的时候执行的代码
+            break;
+        }
+    
+      判断性别，分配厕所
+    */
+    // 先让用户输入性别
+
+    var gender = prompt('请输入性别');
+
+    switch (gender) {
+
+        case "男":
+            console.log('请去男厕所');
+            break;
+
+        case "女":
+            console.log('请去女厕所');
+            break;
+
+        case "人妖":
+            console.log('请去人妖厕所');
+            break;
+
+
+         default:
+            console.log('不知道你是什么');
+            break;
+
+        //  最后一个break可以省略
+
+
+
+    }
+
+
+</script>
+
+</html>

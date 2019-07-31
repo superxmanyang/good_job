@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    while (true) {
+        var text = prompt('你好帅')
+        if (text === 'q') {
+            alert('再见了');
+            break;
+        }
+
+        switch (text) {
+            case '1':
+            case '总和':
+                var numbers = prompt('请输入你要求和的数字，以逗号隔开，例如：1，2，3，4');
+                var arr = numbers.split(',');
+                var sum = 0;
+                for (var i = 0; i < arr.length; i++) {
+                    sum += parseInt(arr[i]);
+                }
+                alert('你要计算的是总和计算出来了'+sum);
+        }
+    }
+
+
+</script>
+
+</html>

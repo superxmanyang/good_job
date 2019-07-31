@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+/*
+  break
+    switch-case 结构里面的作用： 跳出switch-case的判断，后面的代码就不再执行了
+  
+  需求：
+    上电梯 - 有6楼，每到一层就通知 多少楼到了
+    现在我们只想上到3楼
+      - 可以使用break来实现，到3楼就停止
+
+      break 在循环里面两个作用
+        1.break之后的代码不执行了
+        2.break之后的循环不执行
+*/
+
+for(var i =1; i <= 6; i++){  
+  console.log(i+'楼到了');
+  if(i === 3){
+    break;
+  }
+  console.log('abc');
+}
+
+console.log('def');
+
+</script>
+</html>

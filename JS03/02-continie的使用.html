@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+/*
+  continue 关键字
+
+  还是从1楼到6楼
+    要求从1楼到6楼，每层楼都有人下电梯，就提醒
+    如果3楼没有人下电梯，就不再3楼停止了
+
+    - continue 它的作用是：
+      1.continue后面的代码不执行
+      2.但是它之后的循环继续执行
+*/
+for(var i = 1; i <=6;i++){
+  if(i === 3){
+    console.log('3楼没有人下电梯，我们就不停了');
+    continue;
+  }
+  console.log(i + '楼到了，请下电梯');
+}
+</script>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+/*
+  小娜这个项目里面，我们需要做的功能有哪些：
+    1.计算总和
+    2.获取时间
+    3.讲笑话
+    4.弹出一个输入框，让用户根据提示进行输入
+
+  步骤：
+    1.弹出输入框 - 循环 - 未知循环多少次 - while循环
+    2.如果输入的是q，退出循环 - break
+    3.如果输入1 或者是 总和 
+      3.1 继续弹出一个输入框 ，让用户输入以逗号分隔的多个数字，然后求和
+      3.2 - 需要一个新的知识点，来支撑
+    4.如果输入2或者是时间 - 获取当前的时间，并且以固定格式输出 yyyy-MM-dd hh:mm:ss
+      4.1 Date 通过它可以获取年月日时分秒进行输出
+    5.如果输入3或者 笑话 - 随机一个笑话输出
+      5.1 用一个数组，把多个笑话存储起来
+      5.2 随机一个索引，根据索引把笑话获取出来吗，输出
+        需要一个新的知识点支撑
+    6，如果输入的是上述情况之外的字符，
+      弹出道歉，继续循环
+*/
+
+// 1 使用while循环弹出输入框
+while (true){
+  // 2 弹出一个输入框，提示用户进行操作
+  // 注意点： 使用 \n 进行文字的换行控制
+  var msg = prompt("你好，我是传智小娜，你的语音助手~~~~~~~\n" +
+      "输入《编号》或《关键词》选择功能，输入q退出聊天\n" +
+      " 1.计算《总和》\n" +
+      " 2.获取《时间》\n" +
+      " 3.讲个《笑话》\n");
+
+  // 3 判断如果输入的是 q 就终止循环
+  if(msg === 'q'){
+    alert('你已经不爱小娜了吗？');
+    break;
+  }
+  // 4 因为所有的判断都是固定值，所以我们使用switch-case判断
+  switch (msg){
+    case '1':
+    case '总和':
+      // 4.1 继续弹出一个输入框，让用户输入以 , 分割的数字
+      var numbers = prompt('请输入你要求和的数字，以逗号隔开，例如： 1,2,3,4');
+      // console.log(numbers);
+      // 4.2 使用js里面提供的方法实现把字符串根据一定的分隔符进行拆分
+      var arr = numbers.split(',');// 告诉浏览器，用逗号把字符串numbers进行分割
+      // console.log(arr);
+      // 4.3 求和，因为 arr 是一个数组，直接遍历求和
+      var sum = 0;
+      for(var i = 0; i < arr.length; i++){
+        // 分割之后的数组，里面的内容还是字符串，所以需要先把字符串转换为数字
+        sum += parseFloat(arr[i]);
+      }
+      // 4.4 提示总和是多少
+      alert('你要计算的总和计算出来了，是：' + sum);
+      break;
+    case '2':
+    case '时间':
+      // 5 求当前的时间是多少，并且以固定的格式输出
+      // Date 可以获取当前的时间
+      // 5.1 创建一个变量，这个变量可以记录当前的时间
+      var date = new Date();
+      // 5.2 分别获取年月日时分秒
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1;// 因为getMonth得到的是0-11之间的数字
+      var day = date.getDate();
+      var hour = date.getHours();
+      var minute = date.getMinutes();
+      var second = date.getSeconds();
+      // 5.3 如果月，日，时分秒，是小于10的，需要把前面的0补全
+      if(month < 10) {
+        month = '0' + month;
+      }
+      if(day < 10) {
+        day = '0' + day;
+      }
+      if(hour < 10) {
+        hour = '0' + hour;
+      }
+      if(minute < 10) {
+        minute = '0' + minute;
+      }
+      // if(second < 10) {
+      //   second = '0' + second;
+      // }
+      second = second < 10 ? '0' + second : second;
+      // 5.3 需要以一个 yyyy-MM-dd hh:mm:ss 的格式输出
+      // console.log(year,month,day,hour,minute,second);
+      var time = year + '-' + month + '-' + day + ' ' + hour +':'+minute+':'+second;
+      alert('当前的时间是：'+time);
+      break;
+    // 6 输入3或者是笑话，随机一个笑话输出
+    case '3':
+    case '笑话':
+      // 准备一个笑话的数组，每次输入3或者是笑话的时候，进行随机索引，取出笑话弹出提示
+      // 6.1 准备一个笑话的数组
+      var joke = [
+        '笑话1','笑话2','笑话3','笑话4','笑话5','笑话6'
+      ];
+      // 6.2 随机一个索引
+      var r = Math.floor(Math.random() * joke.length);
+      // 6。3 直接输出笑话
+      alert(joke[r]);
+      break;
+    // 如果用户没有按照要求输入，就是上述条件都不成立
+    default :
+      alert('您的话小娜没有听懂，请重新说一次');
+      break;
+  }
+}
+
+</script>
+</html>
