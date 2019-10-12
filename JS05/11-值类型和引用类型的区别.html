@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+/*
+  之前学习数据类型的时候，学过
+    简单(值)
+
+    复杂(引用)
+
+    根本区别：
+      值类型存储在栈空间
+      引用类型存储在堆空间
+*/
+// var a = 10;
+// var b = a;
+// b = 20;
+// console.log(a,b);
+
+// var o1 = {
+//   name : '狗蛋'
+// }
+// var o2 = o1;
+// o2.name = '翠花';
+// console.log(o1.name,o2.name);
+
+
+// var a = 10;
+// var b = 20;
+// function fn(x,y){
+//   x = 100;
+//   y = 200;
+// }
+// fn(a,b);
+// console.log(a,b);
+
+
+var obj1 = {
+  name : '狗蛋'
+};
+function f2(o){
+  o.name = '翠花'
+}
+f2(obj1);
+console.log(obj1.name);
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+
+var d1;
+// new 关键字
+function Dog(name){
+  this.name = name;
+ 
+  console.log(this); // {name : 忘词}
+  
+  console.log(d1 === this);
+}
+// 看到构造函数有一个固定的做法： 总是 new  构造函数
+/*
+  研究new做了什么
+    new在创建对象的过程中，做了这么几件事情
+      1.先创建一个对象   a = new Object()
+      2.调用构造函数，把构造函数中的this 指向 上一步创建的对象 this = a;
+      3.依次执行构造函数中的代码，给this添加属性和方法
+      4.返回this所指向的对象  return this
+*/
+d1 = new Dog('旺财');
+
+</script>
+</html>

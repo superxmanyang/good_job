@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 养成一个习惯，如果不知道某个东西是什么，一般只要可以输出的，就直接输出
+  function Dog(name, age, gender, color) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.color = color;
+    this.run = function () {
+      console.log('速度七十迈');
+    }
+    this.bark = function () {
+      console.log('汪汪汪');
+    }
+    console.log(this);
+    console.log(d1 === this);
+  }
+
+  var d1 = new Dog('小聪',3,'女','green');
+  // console.log(d1);
+  var d2 = new Dog('小弘',2,'公','green');
+ 
+
+  /*
+    this是什么
+      this是js里面的一个关键字，它的功能是代表函数里面的一个对象
+      这个东西不需要我们声明，在函数里面，就自动存在
+      this这个对象在构造函数里面，代表着被new出来的那个对象
+    被构造函数new出来的对象，称为实例对象
+  */
+
+</script>
+
+</html>

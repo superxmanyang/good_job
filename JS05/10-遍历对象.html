@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+// 声明一个对象
+// var obj = {
+//   name : '狗蛋',
+//   age : 12,
+//   gender : '男'
+// };
+
+// 如果这个对象不是你写的
+// console.log(obj);
+
+// 可以遍历对象，得到对象的所有的键和值
+/*
+  key 是一个变量 ，可以自己随意些,key代表了所有的属性名
+  obj 也是一个变量，这个变量取决于你想要遍历的对象
+  for (var key in obj) {
+
+  }
+  for(var 属性名 in 你要遍历的对象){
+
+  }
+*/
+
+var obj = {
+  name : '狗蛋',
+  age : 12,
+  gender : '男'
+};
+// console.log(obj.key);
+for (var key in obj){
+  console.log(key);
+  // 如果想要获取属性的值
+  // 对象.属性名 
+  // console.log(obj.key);
+  // 对象[属性名的字符串]
+  console.log(obj[key]); // obj['name'] obj['age'] obj['gender']
+}
+
+
+
+// // 演示以 键的方式 设置属性和访问属性
+// var obj = {
+//   age : 12
+// };
+// // obj.name = '狗蛋';
+// // obj['name'] = '狗蛋';
+// // console.log(obj);
+// console.log(obj.age);
+// console.log(obj['age']);
+</script>
+</html>

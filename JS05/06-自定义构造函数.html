@@ -1,111 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
+
 <body>
-    
+
 </body>
-
 <script>
+  /*
+    上午的对象的写法
+  */
+  // var person = {};
+  // person.name = '狗蛋';
+  // person.age = 16;
+  // person.gender = '男';
+  // person.sayHi = function(){
+  //   console.log('你们好,我叫' + person.name);
+  // }
+
+  // var p2 = {};
+  // p2.name = '翠花';
+  // p2.age = 15;
+  // p2.gender = '女';
+  // p2.sayHi = function(){
+  //   console.log('你们好,我叫' + person.name);
+  // }
+  // 如果还是按照之前的方式创建对象，此时就不合适了，太麻烦了
+
+  // 把创建人的对象的代码，封装到函数里面
+  // function createPerson(name,age,gender) {
+  //   var person = {};
+  //   person.name = name;
+  //   person.age = age;
+  //   person.gender = gender;
+  //   person.sayHi = function () {
+  //     console.log('你们好,我叫' + person.name);
+  //   }
+  //   return person;
+  // }
+
+  // var p1 = createPerson('狗蛋',16,'男');
+  // console.log(p1);
+
+  // var p2 = createPerson('翠花',15,'女');
+  // console.log(p2);
+
+  // var arr = new Array();
+  // console.log(arr);
+
+  // var dog = new Object();
+  // console.log(dog);
 
 
-// var person = {};
-
-//  person.name = '狗蛋';
-//   person.age = 16;
-//   person.gender = '男';
-
-//   person.sayHi=function(){
-//     console.log('你们好,我叫' + person.name);
-//   }
-
-
-
-//   var p2 = {};
-//   p2.name = '翠花';
-//   p2.age = 15;
-//   p2.gender = '女';
-//   p2.sayHi = function(){
-//     console.log('你们好,我叫' + person.name);
-//   }
-//   如果还是按照之前的方式创建对象，此时就不合适了，太麻烦了
-
-// function createPerson(name,age,gender){
-
-//     var p2 = {};
-//   p2.name = name;
-//   p2.age = age;
-//   p2.gender = gender;
-//   p2.sayHi = function(){
-//     console.log('你们好,我叫' + person.name);
-//   }
-//   return p2;
-  
-// }
-// var p2 = createPerson('大胖子',16,'爸爸')
-// console.log(p2);
-
-// var p1 = createPerson('sss',11,'asas')
-// console.log(p1);
-
-
-
-
-
-
-// 上面封装好的函数，确实可以创建对象，但是所有创建出的对象，看不出来区别
+  // 上面封装好的函数，确实可以创建对象，但是所有创建出的对象，看不出来区别
   // 自定义构造函数可以解决这个问题
 // 改造自定义构造函数
 //  1 自定义构造函数的命名 ： 习惯以大写字母开头，是一个名词
-
-// function aaa (name,age,gender){
-//     // var person ={}
-
-//     this.name = name;
-//     this.age = age;
-//     this.gender = gender;
-    
-//     this.sayHi=function(){
-//         console.log('wangwangwang');
-//     }
-// //   return person
-// }
-
-// var P1 = new aaa('ccc',18,'men');
-// var p2 = new aaa('BBB',18,'AA');
-// console.log(P1);
-// console.log(p2);
-
-
-// function Dog (name,age,gender){
-//     this.name = name;
-//     this.age = age;
-//     this.gender = gender;
-//     this.sayHi=function(){
-//         console.log('wangwangwang');
-//     }
-
-// }
-// var dog = new Dog('xiaogou',16,'women')
-// console.log(dog);
-
-
-
-function Boy(name,age,gender){
-    this.name = name ;
-    this.age = age ;
-    this.gender= gender ;
-    this.sayHi= function(){
-        console.log('I');
+  function Person(name, age, gender) {
+    // var person = {}; // 2 把创建对象的代码去掉
+    this.name = name; // 把所有的对象的变量，变成this
+    this.age = age;
+    this.gender = gender;
+    this.sayHi = function () {
+      console.log('你们好,我叫' + person.name);
     }
-    console.log(this);
-}
-var boy  = new Boy('yang',16,'men')
-console.log(boy);
- boy.sayHi();
+    // return person; // 3 把return也去掉
+  }
+
+  // 4 我们使用自定义构造函数的时候，可以跟js里面提供的构造函数一样，需要使用new的创建
+  var p1 = new Person('狗蛋',16,'男');
+  console.log(p1);
+
+
+  // 写一个狗对象的构造函数
+  function Dog(name,age,gender,color){
+    this.name = name;
+    this.age =age;
+    this.gender = gender;
+    this.color = color;
+    this.run = function(){
+      console.log('速度七十迈');
+    }
+    this.bark = function(){
+      console.log('汪汪汪');
+    }
+  }
+  var d1 = new Dog('小聪',3,'公','green');
+  console.log(d1);
 </script>
+
 </html>

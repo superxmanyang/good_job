@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+/*
+  车
+    特征
+      品牌-brand ， 颜色 - color , 重量-weight ， 价格 - price
+    行为
+      发动 - startUp - 输出： 轰轰轰
+      熄火 - turnOff - 输出： 熄火了
+*/
+function Car(brand,color,weight,price){
+  this.brand = brand;
+  this.color = color;
+  this.weight = weight;
+  this.price = price;
+  this.startUp = function(){
+    console.log('轰轰轰');
+  }
+  this.turnOff = function(){
+    console.log('熄火了');
+  }
+}
+
+
+// 
+var c1 = new Car('奔驰','hotpink','2t','100w');
+console.log(c1);
+
+// ps.在外面是用不了this的所以只能用c1来调用
+c1.startUp();
+c1.turnOff();
+</script>
+</html>
