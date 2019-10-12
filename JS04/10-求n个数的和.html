@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+/*
+  我们写过了求两个数的和，也写过了求3个数的和
+
+  继续求4个数的和
+        5个数的和
+        6个数和
+        ...
+*/
+
+// 函数里面有一个东西，这个东西被称为伪数组——里面有所有的传递过来的实参
+/*
+  形参：  是函数额形式参数，是函数在声明的时候，用来占位的参数
+
+  实参：  是函数的实际参数，是函数在调用的时候，传递的实际用于参与函数执行的参数
+*/
+// // 现在看到的a和b就是形参
+// function f1(a,b){
+//   return a + b;
+// }
+
+// // 现在的10和20就称为实参
+// f1(10,20);
+
+
+// function f1(a,b){
+//   return a + b;
+// }
+// function f2(a,b,c){
+//   return a + b + c;
+// }
+// function f3(a,b,c,d){
+//   return a + b + c + d;
+// }
+
+/*
+  在函数里面，有一个东西
+    arguments - 伪数组，
+      1.里面包含了所有的实参
+      2.函数里面自带的，不需要声明
+      3.不能在函数的外部使用
+
+  javascript里面，允许 形参和实参的个数不一致
+
+  求n个数字的和，就演变成了遍历 arguments 伪数组的问题了
+
+*/
+
+
+function fn(){
+
+    var sum = 0
+    for(var i = 0; i < arguments.length;i++){
+        // 疑问[i]
+        sum += arguments[i];
+    }
+    console.log(arguments);
+    return sum;
+}
+
+
+
+
+fn(10,20)
+fn(10,20,30)
+</script>
+</html>

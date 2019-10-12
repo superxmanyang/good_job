@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body></body>
+
+  <script>
+    /*
+    小娜的功能
+      1.循环弹框询问输入
+      2.输入q退出循环
+      3.输入1或者是总和，就可以输入一串以逗号隔开的数字，然后求和
+      4.输入2或者是时间，可以得到固定格式的当前时间
+      5.输入3或者是笑话，可以随机的获得一个笑话
+      6.如果输入的不满足条件，会弹出提示
+  */
+    // 第一个函数的封装 - 判断小于10补全0的封装
+    function patchZero(number){
+         
+         if(number<0){
+            number= number+'0';
+         }
+         return number ;
+    }
+  
+//   第二个函数的封装，时间的封装
+   function formatDate(){
+       
+    var date = new Date();
+          // console.log(time);
+
+          var year = date.getFullYear();
+          var month = date.getMonth() + 1; // 因为getMonth得到的是0-11之间的数字
+          var day = date.getDate();
+          var hour = date.getHours();
+          var minute = date.getMinutes();
+          var second = date.getSeconds();
+
+          month=patchZero(month);
+          day=patchZero(day);
+          hour=patchZero(hour);
+          minute=patchZero(minute);
+          second=patchZero(second);
+         
+          //   console.log(year);
+        //   if (month < 10) {
+        //     month = "0" + month;
+        //   }
+        //   if (day < 10) {
+        //     day = "0" + day;
+        //   }
+        //   if (hour < 10) {
+        //     hour = "0" + hour;
+        //   }
+        //   if (minute < 10) {
+        //     minute = "0" + minute;
+        //   }
+        //   // if(second < 10) {
+        //   //   second = '0' + second;
+        //   // }
+        //   second = second < 10 ? "0" + second : second;
+          var time =
+            year +"-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
+          
+          return time;
+   }
+
+
+  // // 求数组的和，先单独的封装 - 因为求数组的和，不仅仅是在小娜里面使用，可以在别的地方也可以使用
+
+ function getSumFromArray(arr){
+     
+          //  遍历
+          var sum = 0;
+          for (var i = 0; i < arr.length; i++) {
+            // 分割出来的是字符串
+            sum += parseInt(arr[i]);
+          }
+          // console.log(sum);
+       return sum;
+ }
+
+
+  // 把处理输入1的逻辑，也可以封装成函数，可以把代码简化
+
+  function inputOne(){
+    var numbers = prompt(
+            "请输入你要求和的数字，以逗号隔开，例如：1，2，3，4"
+          );
+          //  内置方法切割数字
+          var arr = numbers.split(",");
+
+          //   调用上面函数
+          sum = getSumFromArray(arr);
+          alert("你要计算的总和出来了" + sum);
+
+
+          return sum;
+  }
+
+
+
+
+
+
+
+    while (true) {
+      //   1.弹出输入框
+      var msg = prompt(
+        "输入1求总和\n输入2求当前的时间\n输入3获得一个随机笑话\n输入q退出循环"
+      );
+
+      if (msg === "q") {
+        alert("退出");
+        break;
+      }
+
+      // 1.
+      switch (msg) {
+        case "1":
+        case "总和":
+        //   var numbers = prompt(
+        //     "请输入你要求和的数字，以逗号隔开，例如：1，2，3，4"
+        //   );
+        //   //  内置方法切割数字
+        //   var arr = numbers.split(",");
+
+        // //   //  遍历
+        // //   var sum = 0;
+
+        // //   for (var i = 0; i < arr.length; i++) {
+        // //     // 分割出来的是字符串
+        // //     sum += parseInt(arr[i]);
+        // //   }
+        // //   // console.log(sum);
+ 
+
+        // //   调用上面函数
+        //   sum = getSumFromArray(arr);
+        //   alert("你要计算的总和出来了" + sum);
+
+          var sum = inputOne();
+          break;
+
+        case "2":
+        case "时间":
+          // 5 求当前的时间是多少，并且以固定的格式输出
+          // Date 可以获取当前的时间
+          // 5.1 创建一个变量，这个变量可以记录当前的时间
+          
+         var time=  formatDate()
+         alert("当前的时间是：" + time);
+          break;
+
+
+
+    
+        case "3":
+        case "笑话":
+          // 准备一个笑话的数组，每次输入3或者是笑话的时候，进行随机索引，取出笑话弹出提示
+          // 6.1 准备一个笑话的数组
+
+          var joke = ["笑话1", "笑话2", "笑话3", "笑话4"];
+
+          // Math.floor像上取整
+          //Math.random()*joke.length   一个随机数*数组长度这里的数组长度是0到4直接永远到不了4
+          var random = Math.floor(Math.random() * joke.length);
+
+          // console.log(random);
+          //joke[random] 数组[索引]
+          alert(joke[random]);
+          break;
+
+
+          default:
+                alert('您的话小娜没有听懂，请重新说一次');
+                break;
+      }
+
+      // 2.
+    }
+  </script>
+</html>

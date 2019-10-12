@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+  /*
+    有一个数组，里面的数据是无序的，需要大家把数组里面的数据，按照从小到大进行排序
+  */
+
+  // var arr = [9,5,12,1,4];
+  // 目标： [1,4,5,9,12]
+  // 了解  ： 冒泡排序 - 相对来说比较简单的排序方式，要自己写是比较麻烦的
+  // 工作中，为了开发的效率，少加班，不猝死，就会使用别人提供的方式
+  // js中提供了一个  sort 方法
+
+  /*
+    sort 方法的使用
+      数组.sort(排序规则函数)
+  */
+
+
+// function fn(a, b) {
+  //   // return a - b ;// 如果返回 a-b 就是从小到大
+  //   return b - a; // 如果返回b-a就是从大到小
+  // }
+
+  // var arr = [9, 5, 12, 1, 4];
+  // arr.sort(fn);
+  // console.log(arr);
+
+
+//  var arr = [9,5,12,1,4];
+
+//  function fn (a,b){
+//      return b-a 
+//  }
+ 
+// console.log(arr.sort(fn));
+
+
+// 可以使用自调用函数来
+
+var arr = [9, 5, 12, 1, 4];
+
+arr.sort(function(a,b){
+    return a-b;
+});
+
+console.log(arr);
+
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    /*
+  作用域链
+    当我们的代码里面存在多级作用域的时候，就会形成作用域链
+    其实指的是一个变量的访问规则
+      1.如果当前的作用域内部有变量，优先使用当前作用域内部的
+      2.如果当前作用域内部没有该变量，返回上一级作用域，甚至链上 进行查找
+      3.如果直到全局作用域还是没有，会报错
+*/  
+//    var i = 30;
+    function b() {
+        var i = 20 ;
+      function a() {
+        // var i = 10;
+        console.log(i);
+      }
+      a();
+    }
+    b();
+  </script>
+</html>

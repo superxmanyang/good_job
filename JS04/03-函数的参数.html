@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+  // 讲故事的时候，可以把名字带上 —— 函数的参数
+
+  /*
+    函数的参数是什么？
+      其实就是一个函数里面的占位符，相当于是一个变量，每次在调用的时候，需要给一个变化的值(实际的值)
+    作用是：
+      每次调用函数，只要有数据产生变化，就可以通过参数，传递到函数体里面
+    怎么使用：按照下面的语法来使用
+    函数的参数
+
+      function 函数名(参数){
+        函数体
+      }
+
+      函数的参数，其实就是相当于是一个变量，需要在每次调用的时候，给它重新赋值
+
+      调用
+        函数名(参数);
+  */
+
+
+  // var lhs = '小葱';
+  // var xhs = '小弘';
+
+  // function tellStroy(lhs,xhs) {
+  //   console.log(lhs + '在给' + xhs + '讲故事');
+  //   console.log('讲的什么呢？');
+  //   console.log('从前有座山，山里有座庙，庙里有个老和尚和一个小和尚');
+  // }
+
+  // tellStroy('小聪','小弘');
+  // tellStroy('圆通','无忌');
+  // tellStroy('小龙','大龙');
+  // tellStroy('阿彪','菲菲');
+
+  // 把求两个数字的和的过程重复使用起来 —— 把两个数字和的过程写成参数
+
+  function getSum(a,b){
+    console.log(a + b);
+  }
+
+  getSum(10,20);
+
+</script>
+
+</html>

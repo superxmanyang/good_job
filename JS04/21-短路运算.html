@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+/*
+  &&   ||  的真正的运算法则
+
+  真正的运算法则：
+    || 
+      逻辑或的左边，如果转换为布尔是true，整个逻辑运算的结果完全取决于左边，所以会直接得到左边，如果左边是false，整个逻辑运算的结果就完全取决于右边，直接返回右边
+
+    &&
+      逻辑与的左边，如果是true，整个逻辑运算的结果就完全取决于右边，所以直接返回右边了，如果左边是false，结果就取决于左边，直接返回左边
+*/
+
+// console.log( 5 || 6 );
+// console.log( 5 && 6 );
+
+
+// function f1(a,fn){
+//   console.log(a);
+//   fn && fn();
+// }
+// function f2(){
+//   console.log('f2');
+// }
+// // f1('abc');
+// f1('abc',f2);
+
+
+
+// 逻辑或解决的问题是： 参数可选的问题
+
+function getSum(a,b,c){
+  a = a || 0;
+  b = b || 0;
+  c = c || 0;
+
+//   因为c是undefind 是false 所以取决于右边，右边是true就是true 是false就是false 这里是0直接返回0
+  return a + b + c;
+}
+// var s1 = getSum(10,20,30);
+// console.log(s1);
+
+var s2 = getSum(10,20);
+console.log(s2);
+
+</script>
+</html>

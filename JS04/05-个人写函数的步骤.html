@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  /*
+    1.看需求，分析要实现的的过程，先把实现过程写出来
+    2.分析过程里面，哪些数据是可能产生变化的，把这些可能产生变化的变成参数
+    3.把不会变化的过程，作为函数体
+    4.按照函数的语法写代码
+    5.考虑是否需要修改函数的返回值
+  */
+
+//   var sum =0 ;
+//   for(var i = 1; i<=10; i++){
+//       sum+=i
+//   }
+
+//   console.log(sum);
+
+
+
+// var sum = 0;
+
+// for(var i =1; i<=100; i++){
+//     sum = sum + i
+// }
+// console.log(sum);
+
+
+
+
+
+   function getSum(n){
+       var sum = 0 ;
+       for(var i = 1; i<=100 ;i++){
+
+           sum+=i;
+
+       }
+       return sum;
+   }
+   console.log(getSum(100));
+
+
+
+  
+
+
+
+</script>
+
+</html>

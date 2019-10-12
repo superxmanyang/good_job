@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    团队开发中，可能有自己的功能，也有别人的额功能，就会存在多个js文件，甚至还会有公共的js文件
+
+    如果每个js里面都滥用全局变量，就可能产生全局变量的冲突问题
+
+   -->
+</body>
+<!-- 14-a是公共js文件 -->
+<script src="./14-a.js"></script>
+<!-- 14-b是一个专门的功能的js文件 -->
+<script src="./14-b.js"></script>
+<script src="./14-c.js"></script>
+<script>
+console.log(aaaa);
+</script>
+</html>

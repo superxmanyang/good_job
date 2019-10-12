@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+/*
+  创建对象的其他语法；
+    var obj = new Object()
+*/
+// 使用构造函数的方式创建对象
+// var person = new Object();
+// console.log(person);
+// person.name = '狗蛋';
+// person.age = 12;
+// person.gender = '男';
+// console.log(person);
+// person.sayHi = function(){
+//   console.log(person.name);
+// }
+// person.sayHi();
+
+
+// 字面量初始化对象
+// var obj = {
+//   属性名 : 属性值,
+//   属性名 : 属性值,
+//   ...
+// };
+
+var person = {
+  name : '狗蛋',
+  age : 12,
+  gender : '男',
+  sayHi : function(){
+    // 当函数里面的代码比较多的时候，不建议这样写了
+    console.log(person.name);
+  }
+}
+console.log(person);
+person.sayHi()
+</script>
+</html>

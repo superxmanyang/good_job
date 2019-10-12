@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+/*
+  求两个数的和的函数
+*/
+
+function f1(a,b){
+
+    return a+b;
+}
+
+console.log(f1(1,2));
+
+/*
+  求三个数的和
+*/
+// function f2(a,b,c){
+//   return a + b + c;
+// }
+
+function f3(a,b,c){
+  // 先求a+b的和
+  var sum = f1(a,b);
+  // 在用已经求出的和和第三个数字相加
+  sum = f1(sum,c);
+  return sum;
+}
+
+// console.log(f3(10,20,30));
+
+
+// 其实就是演示可以在一个函数中，调用另一个函数
+// 函数的调用，会在该函数执行完毕之后，回到被调用的位置继续执行
+
+// function f3(a,b,c){
+
+//   var sum = a + b ;
+
+//   return  sum+c;
+
+
+// }
+
+console.log(f3(10,20,30));
+
+
+
+</script>
+</html>

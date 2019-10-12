@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="button" value="按钮" id="btn">
+</body>
+<script>
+/*
+  匿名函数
+    没有名字的函数
+      function (){}
+      但是js的语法里面，是不允许匿名函数存在的
+      一般就是用在这么几个地方
+        - 函数只是使用一次，后面再也不用的时候
+  自调用函数  
+    自己自动调用的函数
+      (function(){})();
+*/
+
+// 匿名函数的使用场景 1
+// var fn = function(){}
+// 会在webAPI的时候，学习一个东西叫：事件 匿名函数的使用场景2
+// var btn = document.getElementById('btn');// 获取元素根据id
+// btn.onclick = function(){
+//   alert('hello world');
+// };
+
+// 自调用函数 匿名函数的使用场景3
+// (function(){
+//   console.log(123);
+// })();
+
+// 可以使用自调用函数解决全局污染的函数名的问题
+
+//自调用函数记得分割要加分号要不然会报错;
+;(function(){
+  var aaaa = '狗蛋';
+  console.log(aaaa);
+})();(function(){
+  var aaaa = '翠花';
+  console.log(aaaa);
+})();
+(function(){
+  var aaaa = '铁蛋';
+  console.log(aaaa);
+})();
+
+
+</script>
+</html>

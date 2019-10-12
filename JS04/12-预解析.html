@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  /*
+    预解析的过程
+
+      js代码从书写到执行的过程
+        js是一门解释型的语言 —— 脚本语言 —— 解释一行，执行一行 ,如果执行到某一行，报错了，往后就不执行了
+
+        但是在一行一行的解释之前，其实还有一个预解析的过程
+    什么叫预解析
+      预先对所有的代码先解析一下
+        解析所做的事情：
+          1.变量提升和函数提升
+            - 把变量和函数提升到，当前作用域的最顶端
+          2.变量赋值和函数的调用不会改变位置
+  */
+
+
+  // f1(1,2);
+  // function f1(a, b) {
+  //   console.log(a + b);
+  // }
+
+  // f2(4,5);
+  // var f2 = function (a, b) {
+  //   console.log(a + b);
+  // }
+
+
+  // 人工的把代码预解析一下
+  // 1.把函数和变量提升到当前作用域的最订单 2函数的调用和变量的赋值，还在原来的位置
+
+  function f1(a, b) {
+    console.log(a + b);
+  }
+  var f2;
+  f1(1, 2); 
+
+  f2(4, 5);
+  f2 = function (a, b) {
+    console.log(a + b);
+  }
+
+</script>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+/*
+  形参和实参的关系
+*/
+
+// var a = 10;
+// var b = a;
+// b = 20;
+// console.log(a,b);
+// 变量赋值，其实是把栈空间的值复制一份
+
+var a = 10;
+var b = 20;
+
+function fn(x,y){
+  x = 100;
+  y = 200;
+  console.log(x,y);
+}
+fn(a,b);
+// 在局部作用域里面生成了
+console.log(a,b); // 形参改变了，会不会影响实参？目前不会
+</script>
+</html>

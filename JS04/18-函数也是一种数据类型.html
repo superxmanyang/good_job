@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+/*
+  函数也是一种数据类型，只要是数据类型，就可以作为函数的参数
+*/
+// 先证明函数也是数据类型
+// console.log(typeof 1);
+
+// function a(){}
+// console.log(typeof a);
+
+function f1(a,fn){
+    console.log(a);
+    console.log(fn);
+}
+function f2(){
+    console.log('这是f2的代码');
+}
+f1('abc',f2)
+f2()
+</script>
+</html>
