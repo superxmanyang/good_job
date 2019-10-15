@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+// 遍历数组
+// var arr = [1,2,3,4,5];
+// var sum = 0;
+// for(var i =0; i < arr.length; i++){
+//   sum += arr[i];
+// }
+// console.log(sum);
+
+// 数组自带一个可以遍历的方法
+// 数组.forEach(function(元素,索引){
+//   只需要关注遍历的逻辑，不需要关注怎么遍历
+// });
+// var arr = ['a','b','c','d'];
+// var arr = [1,2,3,4,5];
+// var sum = 0;
+// var res = arr.forEach(function(e,i){
+//   // console.log(e);
+//   // console.log(i);
+//   // console.log('---');
+
+    //  sum+=arr[i]
+//   sum += e;
+// })
+// console.log(sum);
+// console.log(res);
+
+
+
+// 把数组里面 大于 2000 的数字筛选出来
+// var arr = [3000,5000,100,80,99,2500];
+// 思路： 遍历数组判断每个元素是否大于2000,如果大于就拿出来，用一个新的数组，装起来
+// var arr2 = [];
+// for(var i =0; i < arr.length; i++){
+//   if(arr[i] > 2000){
+//     arr2.push(arr[i]);
+//   }
+// }
+// console.log(arr2);
+
+
+// var arr = [3000,5000,100,80,99,2500];
+// var arr2 = [];
+// arr.forEach(function(e){
+//   if(e > 2000){
+//     arr2.push(e);
+//   }
+// });
+
+
+//filter - 过滤
+// var arr = [3000,5000,100,80,99,2500];
+// var arr2 = arr.filter(function(e,i){
+//   // 返回一个你要筛选的条件
+//   return e > 2000;
+// })
+// console.log(arr2);
+// 该方法可以在任何你想要根据条件进行数组的数据筛选的时候
+// 用法： 数组.filter(function(元素,索引){
+  // return 你的条件
+// })
+</script>
+</html>

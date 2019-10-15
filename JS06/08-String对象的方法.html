@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+/*
+  我们之前在学习数据类型的时候，字符串是值类型
+  
+  对象是引用类型，谁才有方法，对象
+
+  字符串、数字、布尔等这些简单类型，其实也是可以调用方法的
+
+为什么值类型也能调用方法？  万物皆对象
+其实在js中，也有和数字、字符串、布尔对应的对象
+  Number() - 简单类型对应的构造函数
+  String()
+  Boolean()
+
+  本来值类型是不能调用方法的，但是js在执行的过程中会自己判断，这个值类型是否拥有对应的构造函数，如果有，当我们使用值类型进行调用方法的时候，会做下面的这些事情：
+    当值类型调用方法：
+      1.会先创建一个临时的对应类型的对象
+      2.使用临时对象调用方法
+      3.会立刻销毁临时对象
+*/
+
+// .toString()
+// console.log('abc'.toString());
+// console.log(true.toString());
+// console.log((123).toString());
+// console.log(null.toString());
+
+
+
+// 如果使用一个数字，调用方法
+// (123).toString();
+/*
+  其实会有一个过程：
+    var obj = new Number(123);
+    obj.toString();
+    obj = null
+*/
+
+
+/*
+  字符串的常用方法
+*/
+// split 
+/*
+  作用： 根据一个指定的分隔符，把一个字符串分割为数组
+*/
+// var str = '张飞|关羽|刘备|狗蛋';
+// var resArr = str.split('|');
+// console.log(resArr);
+
+// // 其实和这个split反过来，数组会有一个方法，把数组里面的元素，按照一个指定的分隔符连接到一起
+// // join 加入 - 可以把数组用一个分隔符连接成为一个字符串
+// var res = resArr.join('^');
+// console.log(res);
+
+</script>
+</html>

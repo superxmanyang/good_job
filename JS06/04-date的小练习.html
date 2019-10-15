@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="datetime-local" id="pick">
+  <input type="button" value="按钮" id="btn">
+</body>
+<script>
+// 格式化日期 ，得到一个指定格式的日期： yyyy-MM-dd hh:mm:ss
+
+// 给一个指定的日期，算出距离现在有多少天，多少小时，多少分钟，多少秒
+// 自己创建一个指定日期对象
+// 再获取一个当前的日期对象
+// 转换为毫秒相减 - 相差的毫秒数
+// 根据时间的进制，进行数量的转换
+var pick = document.getElementById('pick');
+// console.log(pick.value);
+var btn = document.getElementById('btn');
+btn.onclick = function(){
+  // console.log(pick.value);
+  var that = new Date(pick.value);
+  console.log(that);
+  //当前的时间
+  var date = new Date();
+  // 算出毫秒差
+  var thatMs = that.getTime();
+  var dateMs = date.getTime();
+
+  // console.log();
+  var timeInerval = Math.abs(thatMs - dateMs);
+  //算出总共差了多少天
+  var second = Math.floor(timeInerval / 1000);
+  console.log(second);
+  var minute = Math.floor(second / 60);
+  console.log(minute);
+  // 消失
+  var hour = Math.floor(minute / 60);
+  console.log(hour);
+  var day = Math.floor(hour / 24);
+  console.log(day);
+  // 求出余下天数又多少小时
+  console.log(hour % 24);
+  // 后面的分钟和秒数 同理
+}
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  /*
+    学方法，学三个东西
+      方法的作用
+      方法的参数
+      方法的返回值
+
+    Math.random()
+      方法的作用： 获取一个 [0,1) 之间的随机小数
+      方法的参数： 无
+      方法的返回值： 小数，所处的范围 [0,1)
+  */
+  // // 随机整数  [1,10]
+  // var r = Math.random(); // [0,1)
+  // r = r * 10 + 1; // [1,11)
+  // r = Math.floor(r);
+  // // console.log(r);
+
+  // // [10,20]
+  // var r = Math.random(); // [0,1)
+  // r = r * 11 + 10; // [0,11) + 10 == [10,21)
+
+  // [n,m] 之间的整数
+  // var r = Math.floor(Math.random() * (m - n + 1) + n);
+  // [1,10]
+  //         [0,1) * 10 + 1 == [1,11)
+  // var r = Math.random() * (10 - 1 + 1) + 1;
+  // [10,20]
+  //         [0,1) * 11 + 10 == [0,11) + 10 == [10,21)
+  // var r = Math.random() * (20 - 10 + 1) + 10;
+</script>
+</html>

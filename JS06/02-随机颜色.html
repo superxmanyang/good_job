@@ -1,0 +1,56 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body style="font-size: 100px" >
+        <!-- <input type="button" value="随机颜色"  onclick="changebodyColor()"> -->
+
+        <input type="button" value="随机颜色" id='rdColor'>
+    </body>
+    <script>
+    
+  // 封装一个可以获得随机区间的整数的函数
+
+       function randomInt(n,m){
+           return Math.floor(Math.random()*(m-n-1)+n);
+       }
+    
+    
+      // 封装一个可以获得随机颜色的函数
+function randomColor(){
+
+   var r = randomInt(0,255);
+   var g = randomInt(0,255);
+   var b = randomInt(0,255);
+
+   return 'rgb('+r+','+g+','+b+')'
+
+};
+// console.log(randomColor());
+
+    
+    
+
+// function changebodyColor(){
+
+//     console.log(document.body);
+//     document.body.style="background-color:"+randomColor();
+// }
+
+var btn = document.getElementById('rdColor')
+
+console.log(btn);
+
+btn.onclick=function(){
+    document.body.style.backgroundColor =randomColor();
+    console.log(document.body.style);
+}
+
+    
+    
+    </script>
+    </html>

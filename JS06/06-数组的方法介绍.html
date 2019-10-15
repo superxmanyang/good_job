@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // push - 推
+  // push/pop  
+  // 把数组翻转
+  // var arr = [1,2,3,4];
+  // 思路：把arr倒序遍历，把arr的最后一个，作为新数组的第0个
+  // var newArr = [];
+  // for(var i = 3; i >= 0; i--){
+  //   // console.log(arr[i]);
+  //   // newArr[newArr.length] = arr[i];
+  //   newArr.push(arr[i]);
+  // }
+  // console.log(newArr);
+
+  // 思路2： 把最后一个元素和第0个元素调换位置，把倒数第二个和顺数第二个调换，以此类推
+  // 调换的次数是 ： Math.floor(数组长度 / 2) 
+  // var arr = [1, 2, 3, 4];
+  // for (var i = 0; i < Math.floor(arr.length / 2); i++) {
+  //   // 把第一个和倒数第一个调换
+  //   var temp = arr[i];
+  //   arr[i] = arr[arr.length - 1 - i]
+  //   arr[arr.length - 1 - i] = temp;
+
+  //   // 把第二个和倒数第二个调换
+  //   // var temp = arr[1];
+  //   // arr[1] = arr[arr.length - 1 - 1]
+  //   // arr[arr.length - 1 - 1] = temp;
+  // }
+  // console.log(arr);
+
+
+  // var arr = [1, 2, 3, 4];
+  // // 其实js里面已经帮我们封装好了一个用于翻转数组的方法
+  // var res = arr.reverse();
+  // console.log(arr);
+  // console.log(res);
+
+  /*
+    数组.push(元素)
+      作用： 把元素从数组的末尾添加
+      参数： 要放到数组末尾的元素，可以是多个
+      返回值： 新的数组的长度
+  */
+
+// var arr3 = [7,8,9];
+// var length = arr3.push(2,3,4,5);
+// console.log(arr3);
+// console.log(length);
+
+
+// pop - 出栈
+// 数组的pop方法
+// 排队
+// var arr = ['a','b','c','d'];
+// // 把数组末尾的元素取出来
+// var last = arr.pop(); // 这个方法是会把数组的长度变短的
+// console.log(last);
+// console.log(arr);
+
+
+// shift 
+// 排队 - 插队
+// var arr = ['a','b','c','d'];
+// // 把一个或者多个插入到最前面
+// arr.unshift('e');
+// console.log(arr)
+// // 还可以从数组的前面把元素取出来
+// arr.shift();
+// console.log(arr);
+
+
+// 数组的splice方法
+// 用户删除元素
+// var arr = ['a','b','c','d','e'];
+// // 数组.splice(从哪里开始删除，要删除多少个)
+// arr.splice(2,2);
+// console.log(arr);
+
+// 把元素插入到数组的指定为诶之
+// var arr = ['a','b','c','d','e'];
+// //数组.splice(从哪里开始插入,0,插入的元素1,插入的元素2...)
+// arr.splice(3,0,5,7,9)
+// console.log(arr);
+
+// 替换元素
+var arr = ['a','b','c','d','e'];
+// 数组.splice(从哪里开始替换，替换多少个,替换的元素有哪些);
+arr.splice(2,3,5,7,9);
+console.log(arr);
+
+</script>
+
+</html>

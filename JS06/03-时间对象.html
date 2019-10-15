@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+// 有个活动在 2019年7月1日开始，7月7日结束
+var start = new Date(2019,6,1,8); // 注意点： 月份是从0开始的，所以当我们给7月，需要给一个6
+
+console.dir(new Date(2019,6,1,8));
+var end = new Date(2019,6,7,23,59);
+console.log(end);
+
+var start = new Date('2019-07-01 8:00:00');
+console.log(start);
+
+// 第三种给指定日期的方式
+// var date = new Date(总毫秒数);
+
+
+var date = new Date(1561692936706);
+console.log(date);
+
+
+// 将时间转换为总的毫秒数
+// 所谓的总毫秒数是从 1970年到指定事件所经过的毫秒数
+var date = new Date();
+console.log(date);
+console.log(date.getTime());
+
+var start = new Date('2019-07-01');
+console.log(start.getTime());
+console.log(date.getTime() > start.getTime());
+
+
+var date = new Date();
+console.log(date.valueOf());
+</script>
+</html>
